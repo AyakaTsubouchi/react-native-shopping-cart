@@ -1,22 +1,15 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-} from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 import ProductList from "../components/ProductList";
-import Cart from "../components/Cart";
+import Cart from "./Cart";
 
 export default function Home({ navigation }) {
-
   return (
     <View style={styles.appWrapper}>
       <Button title="Go to Cart" onPress={() => navigation.navigate("Cart")} />
       <Text style={styles.storeName}>Store Name</Text>
       <ProductList />
-      <Cart/>
-         </View>
+    </View>
   );
 }
 
